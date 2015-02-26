@@ -1,0 +1,276 @@
+/* Rhythm City Style Sheet for all pages */
+
+/* html5 display rule (for older browsers to display these html5 tags as block level elements) */
+address, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {display:block}
+
+/* setting initial margins and paddings to zero for [almost] all elements (doesn't include form elements) */
+a, abbr, acronym, address, article, aside, b, blockquote, body, br, canvas, caption, dd, details, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, img, label, legend, li, link, menu, nav, ol, p, pre, section, small, span, strong, summary table, td, th, tr, u, ul {margin:0; padding:0; border:0}
+
+/* CLASSES (ALL PAGES) */
+.acenter {text-align:center}
+.center {margin:auto; text-align:center}
+.clear {clear:both}
+.hidden {display:none}
+.left {float:left}
+.narrow {width:50%}
+.right {float:right}
+.tiny {font-size:60%}
+.visible {display:block}
+.weak {font-weight:normal; font-size:70%}
+.overlarge {position:absolute; display:none}	/* used for enlarge overlay */
+.bot-trap {display: none;}	/* this keeps dumb submitter bots from spamming my forms */
+
+	/* BASIC TEMPLATE */
+body {background:url('/images/rc-wallpaper.jpg') repeat #000; text-align:center; font-size:16px; padding:10px 0; font-family:verdana,arial,sans-serif}
+.main {background:url('/images/white-trans_bg.png') repeat-y; color:#000; width:800px; margin:0 auto; padding:30px 0 1px; border 2px solid #ff0}
+.main section, .main article {margin:auto}
+ul {text-align:left}
+h1 {display:none}
+h2 {display:none; font-size:150%; margin:0px; color:#00c}	/* styled for some instances where they're displayed */
+h3 {color:#00c;margin:10px 0}
+p {text-align:left; margin:10px auto}
+img, iframe {border:0; margin:0}
+a {color:#f60}
+a:hover {color:#00c; text-decoration:none}
+header nav {opacity:0.9; position:fixed; top:0; left:50%; margin-left:-450px; z-index:10}
+nav table {font-weight:bold; width:900px; margin:auto; text-align:center; font-size:90%; color:#fff; clear:both}
+nav td {border-radius:10px; background-image:url('/images/wb_grad.png'); background-repeat:repeat-x; width:14%; margin:0; padding:5px 0; text-align:center; border:1px solid #fff}
+nav a {text-decoration:none; display:block}
+nav a:hover {color:#ff0}
+::-moz-selection {background:transparent; color:#f60}	/* changes default text-selector in firefox (not ie) */
+::selection {background:transparent; color:#f60}			/* changes default text-selector in safari (not ie) */
+video img {width:inherit; height:inherit}
+footer p {text-align:center; color:#cc0}
+.overlarge img {border:2px solid #f00; border-radius: 10px}
+a[title] {cursor: pointer;}
+.custom-tooltip {text-align:left; font-size: 80%; color: #333; background-color: #ffd; padding: 5px}
+
+	/* INDEX.php */
+#index #content {width:610px}
+#index h2.visible {color:#000}
+#index h3 {margin:0 auto; text-align:left}
+#index h3.promo a {color:#d00; text-align:center; text-shadow:1px 1px 0 #fff, -1px -1px 0 #fff, 3px 3px 2px #aaf; text-decoration: none}
+#index h3.promo a:hover {color:#00c;}
+#index #intro {margin-bottom:20px}
+#index #intro p {margin:0 0 10px}
+#index #ordernow {background:#ddd; border-radius:10px; float:right; width:25%; padding:15px; border:2px solid #000}
+#index #ordernow a {text-decoration:none; color:#00f}
+#index #ordernow h3 {background:#ffa; border:1px solid #000; border-radius:10px; text-align:center; margin:auto; font-weight:normal}
+#index #ordernow h3 span {font-size:70%; color:#f00}
+#index #ordernow img {margin:12px}
+#index #ordernow #cd {margin:-30px 0 15px}
+#index #aboutshow {clear:both; padding:0}
+#index #indexlinks {border-radius:10px; border:2px solid #000; background:#ddd; width:100%; margin:auto; font-weight:bold; padding:10px}
+#index #indexlinks td {vertical-align:bottom; width:33%}
+#index #indexlinks a {text-decoration:none; color:#00f}
+#index #indexlinks a:hover {color:#f60}
+#index #also {margin-top:20px}
+#index #videos {width:67%; float:left}
+
+.main #videos {margin:0}
+.main #videos h3 {text-align:center}
+.main #videos video {margin-bottom:20px; border:2px solid #000; border-radius:10px}
+.main #videos iframe {width:400px; height:225px; margin-bottom:20px; border:2px solid #000}
+
+	/* PLOT.php & PLOT_JR.php*/
+.plot article {width:610px}
+.plot #player {text-align:left; float:right; margin:0; width:350px}
+.plot h2 {font-size:200%}
+.plot h3 {margin:0; text-align:left; font-size:90%; text-decoration:underline}
+.plot hgroup h3 {text-decoration:none; font-size:70%; margin:10px; color:#000}
+.plot hgroup h3 a {color:#f00}
+.plot #suggestion {font-size:70%; font-style:italic; color:#333}
+.plot #suggestion strong {font-style:normal; color:#000}
+.plot #intermission {margin:auto; font-size:150%; font-weight:bold; border-top:1px solid #fff; border-bottom:1px solid #fff}
+.plot #intermission p {text-align:center}
+.plot p {margin-top:0; font-size:90%}
+.plot .act img {border-radius:10px; border:2px solid #f00}
+.plot .act img.enlarge {float:right; clear:both; margin:5px 0 5px 10px; max-width:150px; max-height:150px}
+.plot .overlarge img {max-width:300px}
+#plot_jr .act img, #plot_jr .overlarge img {border-color:#ff0}
+
+	/* CONTACT.php */
+#contact #content {width:80%}
+#contact p {margin-top:20px}
+#contact strong {color:#00c}
+#contact small {font-style:italic; color:#00c; font-size:80%}
+#contact #form {border-radius:10px; float:right; font-size:80%; font-family:arial,sans-serif; text-align:left; background-color:#ddd; border:1px solid #000; width:50%; margin:10px 0px 10px 10px; padding:5px}
+#contact #form th {text-align:right; vertical-align:top; font-size:90%; width:100px}
+#contact #form td {margin:0px}
+#contact #form input {border-radius:10px; padding-left:5px; width:97%}
+#contact #form #city {width:46%}
+#contact #form #state {width:22%}
+#contact #form #zip {width:20%}
+#contact #form textarea {border-radius:10px; padding-left:5px; font-size:14px}
+#contact #form h3 {width:250px; margin:60px 20px; text-align:center}
+#contact #form form h3 {width:100%; margin:20px 10px; font-size:100%; text-align:left}
+#contact #form address {font-style:normal; margin:20px 10px}
+#contact #form address span a {text-decoration:none; color:inherit}
+#contact #form address span a:hover {text-decoration:none; color:#00c}
+
+	/* LICENSING.php */
+#licensing #content {width:680px; padding:0 60px}
+#licensing p {margin-top:20px}
+#licensing strong {color:#00c}
+#licensing .small {font-style:italic; color:#00c; font-size:80%}
+#licensing #choreo_dvd {border-radius:10px; width:327px; height:184px; float:right; clear:right; border:0; margin-left:20px}
+#licensing ul {margin:0; padding-left:20px}
+#licensing ul li {text-align:left; margin:10px 0}
+#licensing #form {float:right; border-radius:10px; font-size:80%; font-family:arial,sans-serif; text-align:left; background-color:#ddd; border:1px solid #000; width:50%; margin:10px 0px 10px 10px}
+#licensing #form th {text-align:right; vertical-align:top; font-size:90%; width:130px}
+#licensing #form td {margin:0}
+#licensing #form input {width:95%; border-radius:10px; padding-left:5px}
+#licensing #form #city {width:44%}
+#licensing #form #state {width:21%;border-radius:10px}
+#licensing #form #zip {width:20%}
+#licensing #form #version {font-style:italic}
+#licensing #form #version input {width:20%}
+#licensing #form textarea {font-size:14px; width:95%; height:70px; border-radius:10px; padding-left:5px}
+#licensing #form h3 {text-align:center; color:#000; font-weight:normal}
+#licensing #form p {margin:20px 10px}
+#licensing #form #price_table th {text-align:center; text-decoration:underline}
+#licensing #form #price_table input {width:70%; text-align:right}
+#licensing #form #price_table td {text-align:center}
+#licensing #form input#printed_materials {width:15px; vertical-align:middle; display:inline-block; float:left}
+#licensing #form label[for='printed_materials'] {font-size:85%}
+#licensing .bold em {color:#00c}
+#licensing #resources {font-size:95%}
+#licensing #resourcelist {list-style-type:none}
+/*#licensing #resourcelist img {max-width:100px; float:left; clear:left; margin-bottom:40px}*/
+#licensing #resourcelist img {max-width:70px}
+#licensing #resourcelist ul {margin-left:70px; list-style-type:disc}
+#licensing #resourcelist ul li {margin:0; margin-left:10px}
+#licensing #resourcelist span {font-size:80%}
+#licensing blockquote {
+	float: right;
+	width: 330px;
+	clear: right;
+	text-align: right;
+	font-size: small;
+	border: 2px solid #00c;
+	padding: 5px;
+	box-sizing: border-box;
+	background: #ffd;
+	border-radius: 10px;
+	margin: 10px 0;
+	color: #000;
+	text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #f00;
+}
+
+	/* CHARACTERS.php */
+.characters #content {width:650px; margin:auto}
+.characters header p {text-align:center}
+.characters header p span {font-size:70%}
+.characters hr {width:85%}
+.characters table {text-align:left}
+.characters table td {padding:5px}
+.characters .bold {font-weight:bold; color:#00c}
+.characters .indent {font-weight:bold; color:#00c; padding-left:30px}
+.characters .fineprint {padding-top:30px; font-size:70%; color:#000; text-align:left; margin:10px; font-style:italic}
+
+	/* ORDER.php */
+#order {background:url('/images/black-trans_bg.png'); text-align:center; color:#fff; margin:auto}
+#order h2 {margin:10px auto; color:#ff0}
+#order h3 {color:#ff0}
+#order h3 img {vertical-align:middle}
+#order p {margin-top:20px}
+#order p.center {width:68%}
+#order strong {color:#ff0}
+#order #jr_row img {max-width:100px}
+#order #jr_row input {max-width:5%}
+#order #jr_row td {padding:5px 35px 5px 0}
+#order #form {font-size:80%; text-align:left; background-color:#333; border:1px solid #000; border-radius:15px; width:75%; margin:10px auto; padding-bottom:10px}
+#order #form table {width:420px; margin:0 auto}
+#order #form th {text-align:right; vertical-align:top; font-size:90%; width:25%}
+#order #form th.item {width:50%}
+#order #form td {margin:0px}
+#order #form input {width:97%; border-radius:10px; padding-left:5px}
+#order #form select {border-radius:10px}
+#order #form #city {width:46%}
+#order #form #state {width:20%}
+#order #form #zip {width:20%}
+#order #form #coupon {width:25%}
+#order #form textarea {font-family:arial, sans-serif; font-size:14px; border-radius:10px; padding-left:5px}
+#order #form h3 {text-align:center}
+#order #media {text-align:right; padding:10px 0}
+#order #media thead th {color:#ff0; text-decoration:underline}
+#order #media tbody th {width:200px}
+#order #media .item {width:48%}
+#order #form p {font-size:80%; margin:0; color:#f60; text-align:right}
+#order #review p {font-size:100%; color:#fff; text-align:left; margin-left:10px}
+#order #review strong {color:#ff0}
+#order #review form {text-align:center}
+#order #review input#buynow {width:auto; margin:10px}
+#order #review .center {margin:auto; text-align:center}
+#order #review #submit_free_order {width:30%}
+#order #thankyou, #order #cancel {width:80%; margin:auto}
+#order #checkmark, #order #redx {display:none;margin-left:10px}
+
+	/* TESTIMONIALS.php */
+#reviews {background:none; width:800px}
+#reviews p {color:#fff}
+#reviews iframe {border-radius:10px}
+#reviews blockquote {font-size:90%; opacity:0.9; border-radius:10px; background:#ddd; padding:0 10px 5px}
+#reviews blockquote p {color:#00f; text-align:center; padding:3px 0}
+#reviews blockquote footer {color:#f00; text-align:right; margin-top:-10px; font-size:90%}
+#reviews #audience {float:left}
+#reviews #cast {float:right}
+#reviews .quotes {border-radius:10px; width:48%; margin:5px; color:#f00; background:#000}
+#reviews .quotes h3 {color:#ff0}
+#reviews .quotes hr {margin:-5px auto 10px; color:#f60; background-color:#f60; width:90%; height:3px}
+#reviews .quotes ul {font-size:13pt; text-align:left; margin-right:10px; list-style:none; margin-left:10px; padding:0 10px 10px}
+#reviews .quotes ul li {border-radius:7px; padding:4px 3px 4px 12px; margin:6px 0; background:#fff}
+#reviews .quotes ul li.altrow {background-color:#ffc; color:#00f}
+
+	/* MOVIE.php */
+.movie {background:#000; color:#fff}
+.movie #full_dvd {border:2px solid #fff; width:760px; height:430px; margin:20px auto}
+.movie p {width:90%; margin:auto; font-size:80%}
+
+	/* SURVEY */
+#survey p {text-align:center}
+#survey .tiny {font-size:75%}
+#survey table {text-align:left}
+#survey table .question {font-weight:bold; background:#ccf}
+#survey table .question strong {text-decoration:underline}
+#survey table .question td {padding:5px 10px}
+#survey table .answer {background:#cfc}
+#survey table .answer td {padding-left:40px}
+#survey table input[type='radio'] {margin-right:10px}
+#survey table input[type='text'] {width:80%}
+
+	/* PRODUCTIONS */
+#productions {height:710px; padding-bottom:140px}
+#productions h3 {font-size: 115%}
+#productions aside {width:15%; height:300px}
+#productions aside.left {margin:10px}
+#productions aside.right {margin:10px}
+#productions aside img {margin:auto}
+#productions #verbiage h3 {font-weight:normal; margin-bottom:20px}
+#productions #verbiage li {list-style:none; text-align:center; margin:10px 0}
+#productions button {float:right; position:relative; right:80px; margin:0 0 5px}
+#productions #showpics {clear:both; margin:auto; border-collapse:collapse; width:80%}	/* width:85% when there are 4 frames per row */
+#productions #showpics tr {height:125px}
+#productions #showpics td {font-size:60%; width:160px; vertical-align:top}
+#productions #showpics td img {border:5px solid #000; width:200px}
+#productions #showpics div {width:160px; position:absolute; z-index:0}
+#productions #showpics div.previous {z-index:1}
+#productions #showpics div.current {z-index:2}
+
+	/* JR.php */
+#jr #content {width:610px}
+#jr h2.visible {color:#000;margin:10px}
+#jr p {text-align:center; font-size:90%}
+#jr h3 {margin:0 auto; text-align:left}
+#jr #intro {margin-bottom:20px}
+#jr #intro p {margin:0 0 10px}
+#jr #jrlinks {border-radius:10px; border:2px solid #000; background:#ddd; width:100%; margin:auto; font-weight:bold; padding:10px}
+#jr #jrlinks td {vertical-align:middle; width:40%}
+#jr #jrlinks .narrow {width:5%}
+#jr #jrlinks a {text-decoration:none; color:#00f}
+#jr #jrlinks a:hover {color:#f60}
+
+/*** RhythmCity.org ***/
+
+
+
