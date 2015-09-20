@@ -44,7 +44,7 @@ if(filter_input(INPUT_POST, 'submit')) {
 	$phone = get_magic_quotes_gpc() ? $phone : addslashes($phone);
 	$comments = get_magic_quotes_gpc() ? $comments : addslashes($comments);
 
-	$to = $config['info_email'];
+	$to = $config['personal_email'];
 	$message = "<b>New Rhythm City Contact:</b><br><br>\n"
 		. "Name: $name<br>\n"
 		. "Email: $email<br>\n"
@@ -126,7 +126,7 @@ if(isset($completedform)) {
 			<address>
 				<strong>Phone:</strong> <span><a href='tel://913-980-5376' title='Give us a call!'>(913) 980-5376</a></span><br>
 				<strong>Email:</strong> <em>" . disguiseMail("<a href='mailto:" . $config['info_email'] . "'>" . $config['info_email'] . "</a>") . "</em><br>
-				<strong>Postal Mail:</strong>12400 W. 62nd Ter, Ste. H<br>
+				<strong>Postal Mail:</strong>5502 Oakview<br>
 				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Shawnee, KS 66216
 			</address>
 		</form>";

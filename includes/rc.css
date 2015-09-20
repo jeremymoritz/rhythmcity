@@ -240,7 +240,7 @@ a[title] {cursor: pointer;}
 #survey table input[type='text'] {width:80%}
 
 	/* PRODUCTIONS */
-#productions {height:710px; padding-bottom:140px}
+#productions {height:810px; padding-bottom:140px}
 #productions h3 {font-size: 115%}
 #productions aside {width:15%; height:300px}
 #productions aside.left {margin:10px}

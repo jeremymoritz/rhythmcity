@@ -127,7 +127,7 @@ if(filter_input(INPUT_POST, 'submit')) {
 		$sth->execute();
 
 		//	Send a mailer to me
-		$to = $config['licensing_email'];
+		$to = $config['personal_email'];
 		$message = "<b>Rhythm City Licensing Quote Inquiry:</b><br><br>\n"
 			. "<b>Name:</b> $name<br>\n"
 			. "<b>Company:</b> $company<br>\n"
@@ -251,7 +251,7 @@ if(isset($completedform)) {
 		</section>
 		<iframe id='choreo_dvd' src='http://player.vimeo.com/video/23181749?title=0&amp;byline=0&amp;portrait=0'></iframe>
 		<blockquote>
-			"This information is better than anything I have ever received for any play or musical I have directed in my 30 years of directing! Your Director's Package is awesome! Thank you so very much for saving my manager and me so much work and time."<br>
+			"Your Director's Package is awesome! The materials are better than anything I have ever received for any play or musical I have directed in my 30 years of directing! Thank you so very much for saving my manager and me so much work and time."<br>
 			<cite>~Cor Jesu Academy, St. Louis, MO</cite>
 		</blockquote>
 		<section id='resources'>

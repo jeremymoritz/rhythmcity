@@ -21,7 +21,7 @@ $max_zip = 11;
 $max_coupon = 10;
 $max_comments = 1000;
 
-if(filter_input(INPUT_POST, 'submit')) {
+if(isset($_POST) && isset($_POST['submit'])) {
 	//	They've filled out the form and submitted it.  Now let's insert their info into the database!
 	$name = stripslashes(substr(apiPost('name'),0,$max_name));
 	$company = stripslashes(substr(apiPost('company'),0,$max_name));
@@ -57,11 +57,11 @@ if(filter_input(INPUT_POST, 'submit')) {
 	$likelySpam = false;
 	if(apiPost('questions') || apiPost('referral') || apiPost('website') !== 'http://') {	//	if any of these bot-trap (hidden) fields are filled, this is almost certainly spam
 		$likelySpam = true;
-	} elseif($coupon && !in_array($coupon, $coupon_codes) && strstr(trim($name), ' ')) {
+	} elseif($coupon && !in_array($coupon, array_keys($coupon_codes)) && !strpos(trim($name), ' ')) {	//	if name has no spaces and they've entered a bad coupon code...
 		$likelySpam = true;
 	}
 
-	if($total > 0 && !isBlacklistedIP($ip) && !$likelySpam) {
+	if($total > 0 && !$likelySpam) {
 		if($coupon && $coupon_codes[$coupon] === 'FREEDVD') {	//	check to see if this coupon is in the coupon_codes array
 			$total = max($total - $price_dvd,0);	//	subtracts price of DVD, but never lower than zero.
 			$total = ($total == 5 ? 0 : $total);	//	if total is $5, reduce it to free
@@ -76,9 +76,9 @@ if(filter_input(INPUT_POST, 'submit')) {
 		$what_ordered = $combo_qty > 0 ? "DVD & CD" : ($dvd_qty + $dvdjr_qty > 0 ? "DVD" : "CD");
 
 		//	Send a mailer to me
-		$to = $config['order_email'];
+		$to = $config['personal_email'];
 		if($coupon && $coupon_codes[$coupon] === 'DOLLAR') {
-			$to = 'jeremy@rhythmcity.org';	//	send mailer only to me
+			$to = $config['personal_email'];	//	send mailer only to me
 		}
 		$message = "$name<br>$company<br>$address<br>$city, $state $zip<br><br><br>\n"
 			. "<b>New Rhythm City $what_ordered Order:</b><br><br>\n"

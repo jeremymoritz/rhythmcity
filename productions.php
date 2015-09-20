@@ -21,7 +21,8 @@ $shows_arr = array(
 	"Utica High School|uhs|rc|19",
 	"Philomath High School|phs|rc|21",
 	"East Carteret High School|echs|rc|7",
-	"Cor Jesu Academy|cja|rc|19"
+	"Cor Jesu Academy|cja|rc|19",
+	"Maranatha Christian Academy|mca|rcjr|14"
 );
 shuffle($shows_arr);	//	randomize shows
 
@@ -80,26 +81,38 @@ $showpics = "
 		</aside>
 		<section id='verbiage'>
 			<h2>Rhythm City Around the Country</h2>
-			<h3>A sampling of schools and community theatres that have produced <strong>Rhythm City</strong> and <strong>Rhythm City Junior</strong>:</h3>
-			<ul>
-				<li>Trilogy Cultural Arts Centre (Olathe, KS)</li>
-				<li>Biloxi High School (Biloxi, MS)</li>
-				<li>Lompoc High School (Lompoc, CA)</li>
-				<li>Clyde High School (Clyde, OH)</li>
-				<li>Murray Middle School (Stuart, FL)</li>
-				<li>Kickapoo High School (Springfield, MO)</li>
-				<li>Utica High School (Utica, MI)</li>
-				<li>Blue Valley High School (Overland Park, KS)</li>
-				<!--<li>Immeasurable Productions (Kansas City, MO)</li>-->
-				<li>Marengo Community High School (Marengo, IL)</li>
-				<li>Leawood Middle School (Leawood, KS)</li>
-				<li>Philomath High School (Philomath, OR)</li>
-				<li>South Valley Middle School (Liberty, MO)</li>
-				<li>East Carteret High School (Beaufort, NC)</li>
-				<li>St Edward High School (Elgin, IL)</li>
-				<li>Cor Jesu Academy (St. Louis, MO)</li>
-				<li>Greater Atlanta Christian School (Atlanta, GA)</li>
+			<h3>A sampling of schools and community theatres that have recently produced <strong>Rhythm City</strong> and <strong>Rhythm City Junior</strong>:</h3>
+			<ul id='venues-list'>
 			</ul>
+			<script>
+				var venues = [
+					'Trilogy Cultural Arts Centre|Olathe, KS',
+					'Biloxi High School|Biloxi, MS',
+					'Lompoc High School|Lompoc, CA',
+					// 'Clyde High School|Clyde, OH',
+					'Murray Middle School|Stuart, FL',
+					'Geneseo High School|Geneseo, IL',
+					'Kickapoo High School|Springfield, MO',
+					'Utica High School|Utica, MI',
+					'Blue Valley High School|Overland Park, KS',
+					'Immeasurable Productions|Kansas City, MO',
+					'Marengo Community High School|Marengo, IL',
+					'Leawood Middle School|Leawood, KS',
+					'Philomath High School|Philomath, OR',
+					'South Valley Middle School|Liberty, MO',
+					'East Carteret High School|Beaufort, NC',
+					'Maranatha Christian Academy|Shawnee, KS',
+					'St Edward High School|Elgin, IL',
+					'Cor Jesu Academy|St. Louis, MO',
+					'Greater Atlanta Christian School|Atlanta, GA'
+				];
+				$.each(venues, function eachVenue(index, venue) {
+					var company = venue.split('|')[0];
+					var city = venue.split('|')[1];
+
+					$('#venues-list').append('<li>' + company + ' (' + city + ')</li>');
+				});
+			</script>
 		</section>
 		<?=$showpics;?>
 	</section>

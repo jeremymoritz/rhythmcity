@@ -172,15 +172,15 @@ function disguiseMailLink($simpleEmailAddress) {
 	//	determines if the IP is on the blacklist
 function isBlacklistedIP($ip) {
 	//	Check to be sure their IP is not on the blacklist before submitting it
-	$blackIPs = array();
-	$blacklistJSON = json_decode(file_get_contents('http://jeremymoritz.com/support/ip_blacklist.json'));
+	// $blackIPs = array();
+	// $blacklistJSON = json_decode(file_get_contents('http://jeremymoritz.com/support/ip_blacklist.json'));
 	$ipIsBlacklisted = false;	//	innocent until proven guilty
-	foreach($blacklistJSON->blacklist as $bIP) {
-		if($ip === $bIP) {
-			$ipIsBlacklisted = true;
-			break;
-		}
-	}
+	// foreach($blacklistJSON->blacklist as $bIP) {
+	// 	if($ip === $bIP) {
+	// 		$ipIsBlacklisted = true;
+	// 		break;
+	// 	}
+	// }
 	// $ipParts = explode('.', $ip);
 	// foreach($blackIPs as $blackIP) {
 	// 	$blackIPParts = explode('.', $blackIP);
